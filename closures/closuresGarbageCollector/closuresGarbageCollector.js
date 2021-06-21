@@ -8,5 +8,6 @@ function a(){
         console.log(x)
     }
 }
+//z is garbage collected
 
 a()();
