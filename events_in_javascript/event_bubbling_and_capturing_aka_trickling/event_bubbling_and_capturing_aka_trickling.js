@@ -3,20 +3,20 @@
 //in the same nesting hierarchy till it reaches the outermost DOM element or document object 
 //(Provided the handler is initialized).
 
-// document.querySelector("#grandParent")
-//     .addEventListener('click', () => {
-//         console.log('Grand Parent Clicked');
-//     },false)
+document.querySelector("#grandParent")
+    .addEventListener('click', () => {
+        console.log('Grand Parent Clicked');
+    },false)
 
-// document.querySelector("#parent")
-//     .addEventListener('click', () => {
-//         console.log('Parent Clicked');
-//     },false)
+document.querySelector("#parent")
+    .addEventListener('click', () => {
+        console.log('Parent Clicked');
+    },false)
 
-// document.querySelector("#child")
-//     .addEventListener('click', () => {
-//         console.log('Child Clicked');
-//     },false)
+document.querySelector("#child")
+    .addEventListener('click', () => {
+        console.log('Child Clicked');
+    },false)
 
 
 //This is an example of event bubbling.
@@ -48,7 +48,7 @@
 
 
 //Stop Propagation
-//It stops the further event propagation after the current event. 
+//It stops the further event propagation. 
 
 // document.querySelector("#grandParent")
 //     .addEventListener('click', () => {

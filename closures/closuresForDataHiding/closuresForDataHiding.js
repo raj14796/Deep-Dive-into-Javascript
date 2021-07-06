@@ -1,8 +1,8 @@
-var count = 0;
-function incrementCounter() {
-    count++;
-}
-console.log(count);
+// var count = 0;
+// function incrementCounter() {
+//     count++;
+// }
+// console.log(count);
 //the problem here is anyone can access that counter using increment or decrement function.
 
 
@@ -28,19 +28,19 @@ console.log(count);
 
 
 
-// function Counter() {
-//     var count = 0;
-//     this.incrementCounter = function () {
-//         count++;
-//         console.log(count)
-//     }
-//     this.decrementCounter = function () {
-//         count--;
-//         console.log(count)
-//     }
-// }
-// var counter1 = new Counter();
-// counter1.incrementCounter();
-// counter1.decrementCounter();
+function Counter() {
+    var count = 0;
+    this.incrementCounter = function () {
+        count++;
+        console.log(count)
+    }
+    this.decrementCounter = function () {
+        count--;
+        console.log(count)
+    }
+}
+var counter1 = new Counter();
+counter1.incrementCounter();
+counter1.decrementCounter();
 //here we can create as many functions as we want.
 //so the solution is creating constructor function. 
