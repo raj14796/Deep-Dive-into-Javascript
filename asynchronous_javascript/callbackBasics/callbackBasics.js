@@ -12,3 +12,4 @@ x(function(y){
 })
 
 //y is a callback function.
+//x is a higher order function.
