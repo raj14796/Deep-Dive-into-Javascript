@@ -11,3 +11,4 @@ function abc() {
     console.log(b)
 }
 abc()
+console.log(b)

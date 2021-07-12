@@ -1,9 +1,13 @@
 // Guess the output
 let arr = [1,2,3,4,5]
 let i;
+for(let j=0;j<arr.length;j++){
+    console.log(j)
+}
+console.log('-----------------------------------')
 for(i=0;i<arr.length;i++){
     setTimeout(()=>{
-        console.log(arr[i])
+        console.log(i,arr[i])
     },2000)
 }
 
