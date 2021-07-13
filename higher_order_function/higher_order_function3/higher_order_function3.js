@@ -1,3 +1,4 @@
+//Polyfill for map function
 const area = function (radius) {
     return Math.PI * radius * radius
 }
