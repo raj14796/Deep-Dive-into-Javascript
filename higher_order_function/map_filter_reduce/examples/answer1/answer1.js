@@ -4,3 +4,6 @@ const users = [
     { firstName: "akshay", lastName: "kumar", age: 50 },
     { firstName: "ishan", lastName: "singh", age: 9 }
 ]
+
+const name = users.map((aUser) => aUser.firstName + " " + aUser.lastName)
+console.log(name)
