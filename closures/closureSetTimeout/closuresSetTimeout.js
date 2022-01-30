@@ -1,6 +1,6 @@
 //goal of this program is to print 1 2 3 4 5 respectively after every second
 function x() {
-    for (var i = 1; i < 6; i++) {
+    for (let i = 1; i < 6; i++) {
         setTimeout(function(){
             console.log(i)
         },i*1000)

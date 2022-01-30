@@ -12,15 +12,17 @@ const b = function () {
 
 //Named Function Expression
 const c = function xyz() {
+    console.log(xyz)
     console.log("Named Function Expression");
 }
+c()
 //Difference between Function Statement and Function Expression is HOISTING.
 
 
 //Anonymous Function
-function() {
-    console.log("Anonymous Function");
-}
+// function() {
+//     console.log("Anonymous Function");
+// }
 //Anonymous Function does not have its own identity.
 //It always needs to be declared like function expression.
 //Otherwise,it will result into syntax error: Function statements require a function name.
@@ -31,6 +33,7 @@ function() {
 function d(parameter) {
     console.log("Difference between parameters and arguments");
 }
+var argument = "A"
 d(argument);
 
 
