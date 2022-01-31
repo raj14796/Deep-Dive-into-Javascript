@@ -11,3 +11,6 @@ let c = '6'
 c+=1;
 console.log("c : ",c)
 
+
+console.log('b-c : ',b-c)
+
