@@ -3,7 +3,7 @@
 //     count++;
 // }
 // console.log(count);
-//the problem here is anyone can access that counter using increment or decrement function.
+//the problem here is anyone can access that counter(count variable) using increment or decrement function.
 
 
 
