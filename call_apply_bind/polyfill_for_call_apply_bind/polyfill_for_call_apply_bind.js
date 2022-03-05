@@ -34,16 +34,20 @@ console.log('1.Polyfill for call method : ');
 Function.prototype.myCall = function (context, ...args) {
     context._this = this; // this = printName
     context._this(...args);
+    delete context._this;
 }
 printName.myCall(name, 'Patna', 'Bihar', 'India');
+
 
 // Polyfill for apply method
 console.log('2.Polyfill for apply method : ');
 Function.prototype.myApply = function (context, args) {
     context._this = this; // this = printName
     context._this(...args);
+    delete context._this;
 }
 printName.myApply(name, ['Patna', 'Bihar', 'India']);
+
 
 // Polyfill for bind method
 console.log('3.Polyfill for bind method : ');
@@ -51,6 +55,7 @@ Function.prototype.myBind = function (context, ...args) {
     context._this = this; // this = printName
     return function () {
         context._this(...args);
+        delete context._this;
     }
 }
 const printMyName2 = printName.myBind(name, 'Patna', 'Bihar', 'India');
