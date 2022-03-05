@@ -32,9 +32,9 @@ console.log('--------------***--------------');
 // Polyfill for call method
 console.log('1.Polyfill for call method : ');
 Function.prototype.myCall = function (context, ...args) {
-    context._this = this; // this = printName
-    context._this(...args);
-    delete context._this;
+    context._fn = this; // this = printName
+    context._fn(...args);
+    delete context._fn;
 }
 printName.myCall(name, 'Patna', 'Bihar', 'India');
 
@@ -42,9 +42,9 @@ printName.myCall(name, 'Patna', 'Bihar', 'India');
 // Polyfill for apply method
 console.log('2.Polyfill for apply method : ');
 Function.prototype.myApply = function (context, args) {
-    context._this = this; // this = printName
-    context._this(...args);
-    delete context._this;
+    context._fn = this; // this = printName
+    context._fn(...args);
+    delete context._fn;
 }
 printName.myApply(name, ['Patna', 'Bihar', 'India']);
 
@@ -52,10 +52,10 @@ printName.myApply(name, ['Patna', 'Bihar', 'India']);
 // Polyfill for bind method
 console.log('3.Polyfill for bind method : ');
 Function.prototype.myBind = function (context, ...args) {
-    context._this = this; // this = printName
+    context._fn = this; // this = printName
     return function () {
-        context._this(...args);
-        delete context._this;
+        context._fn(...args);
+        delete context._fn;
     }
 }
 const printMyName2 = printName.myBind(name, 'Patna', 'Bihar', 'India');
