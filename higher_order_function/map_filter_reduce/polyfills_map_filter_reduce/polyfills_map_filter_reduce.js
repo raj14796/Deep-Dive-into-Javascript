@@ -68,7 +68,12 @@ Array.prototype.myReduce = function (callback, initialValueForAccumulator) {
     const givenArray = this;
     let accumulator = initialValueForAccumulator;
     for (let i = 0; i < givenArray.length; i++) {
-        accumulator = callback(accumulator, givenArray[i]);
+        if(accumulator === undefined ) {
+            accumulator = givenArray[i];
+        }
+        else{
+            accumulator = callback(accumulator, givenArray[i]);
+        }
     }
     return accumulator;
 }
