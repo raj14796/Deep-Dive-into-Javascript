@@ -53,12 +53,12 @@ printName.myApply(name, ['Patna', 'Bihar', 'India']);
 console.log('3.Polyfill for bind method : ');
 Function.prototype.myBind = function (context, ...args) {
     context._fn = this; // this = printName
-    return function () {
-        context._fn(...args);
+    return function (...args2) {
+        context._fn(...args, ...args2);
         delete context._fn;
     }
 }
 const printMyName2 = printName.myBind(name, 'Patna', 'Bihar', 'India');
 printMyName2();
 const printMyName3 = printName.myBind(name, 'Patna', 'Bihar');
-printMyName2('India');
+printMyName3('India');
