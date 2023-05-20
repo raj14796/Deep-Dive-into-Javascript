@@ -64,13 +64,15 @@ console.log('-------------------------------');
 
 
 // Polyfill for reduce
-Array.prototype.myReduce = function (callback, initialValueForAccumulator) {
-    const givenArray = this;
-    let accumulator = initialValueForAccumulator;
-    for (let i = 0; i < givenArray.length; i++) {
-        accumulator = callback(accumulator, givenArray[i]);
+Array.prototype.myReduce = function (callback, acc) {
+    const array = this;
+    const length = array.length;
+    let res = acc ?? array[0];
+    let start = acc ? 0 : 1;
+    for (let i = start; i < length; i++) {
+        res = callback(res, array[i], i, array);
     }
-    return accumulator;
+    return res;
 }
 const myMax = arr.myReduce((accumulator, current) => {
     if (current > accumulator) {
